@@ -1,0 +1,88 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<body>
+  <app-navbar></app-navbar>
+  <mat-card>
+    <mat-card-content>
+      <div class="h3">Book Your Desired Bike</div>
+    </mat-card-content>
+    <mat-card-content>
+      <form (ngSubmit)="submit()" [formGroup]="bookingForm">
+        <mat-form-field>
+          <mat-label>Bike Name</mat-label>
+          <mat-select required formControlName="bikeName">
+            <mat-option>Select</mat-option>
+            <mat-option *ngFor="let bike of bikes" [value]="bike.modelName">{{
+              bike.modelName
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Location</mat-label>
+          <mat-select required formControlName="location">
+            <mat-option>Select</mat-option>
+            <mat-option value="East">East</mat-option>
+            <mat-option value="West">West</mat-option>
+            <mat-option value="North">North</mat-option>
+            <mat-option value="South">South</mat-option>
+            <mat-option value="Central">Central</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="licenseNo"
+            required
+            placeholder="License No."
+            formControlName="licenseNo"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            type="number"
+            name="duration"
+            required
+            placeholder="Duration in Hour"
+            formControlName="duration"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            type="number"
+            name="quantity"
+            required
+            placeholder="Quantity"
+            formControlName="quantity"
+          />
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!bookingForm.valid"
+        >
+          Book
+        </button>
+      </form>
+      <div class="h6" style="margin-top: 10px">{{ responseMessage }}</div>
+      <div class="h6" style="color: red; margin-top: 10px">
+        {{ errorMessage }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+</body>

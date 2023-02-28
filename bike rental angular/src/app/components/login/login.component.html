@@ -1,0 +1,44 @@
+<body>
+  <mat-card>
+    <mat-card-content>
+      <p>Bike Rental Portal</p>
+      <p>Log In</p>
+    </mat-card-content>
+    <mat-card-content>
+      <form (ngSubmit)="login()" [formGroup]="loginForm">
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="username"
+            required
+            placeholder="Username"
+            formControlName="name"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="password"
+            required
+            name="password"
+            placeholder="Password"
+            formControlName="pass"
+          />
+        </mat-form-field>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!loginForm.valid"
+        >
+          Login
+        </button>
+        <a mat-button routerLink="/register">
+          New User? Click here to Register
+        </a>
+      </form>
+      <div style="color: red; font-weight: bold">{{ loginError }}</div>
+    </mat-card-content>
+  </mat-card>
+</body>

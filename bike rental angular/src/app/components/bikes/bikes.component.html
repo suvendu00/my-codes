@@ -1,0 +1,132 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<body>
+  <app-navbar></app-navbar>
+  <div class="container" style="width: auto; margin-top: 50px">
+    <div class="serach-container">
+      <div class="h2">Search Your Desired Bikes</div>
+      <div class="row">
+        <div class="col">
+          <select
+            class="form-select form-select-md col-md-4"
+            (change)="callSearchName($event)"
+          >
+            <option selected>Select Bike Name</option>
+            <option *ngFor="let bike of bikes">
+              {{ bike.modelName }}
+            </option>
+          </select>
+        </div>
+        <!-- <div class="col-md-4"></div> -->
+        <div class="col">
+          <select
+            class="form-select form-select-md col-md-4"
+            (change)="callSearchType($event)"
+          >
+            <option selected>Select Bike Type</option>
+            <option *ngFor="let type of types">
+              {{ type }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="output-tables" *ngIf="searchNameOutput">
+      <table class="table table-striped table-dark custab">
+        <thead>
+          <tr>
+            <th>Bike Id</th>
+            <th>Bike Name</th>
+            <th>Manufacturer</th>
+            <th>Bike Type</th>
+            <th>Rent/Hour (Rs.)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ bikeDetails?.bikeId }}</td>
+            <td>{{ bikeDetails?.modelName | uppercase }}</td>
+            <td>{{ bikeDetails?.manufacturer | uppercase }}</td>
+            <td>{{ bikeDetails?.type }}</td>
+            <td>{{ bikeDetails?.rentPrice }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-striped table-dark custab" id="output-tables">
+        <thead>
+          <tr>
+            <th>Serial Id</th>
+            <th>Location</th>
+            <th>Quantity Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let location of bikeLocationDetails">
+            <td>{{ location?.serialId }}</td>
+            <td>{{ location?.location | uppercase }}</td>
+            <td>{{ location?.quantity }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container" id="output-tables" *ngIf="searchTypeOutput">
+      <table class="table table-striped table-dark custab">
+        <thead>
+          <tr>
+            <th>Bike Id</th>
+            <th>Bike Name</th>
+            <th>Manufacturer</th>
+            <th>Bike Type</th>
+            <th>Rent/Hour (Rs.)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let type of bikeTypes">
+            <td>{{ type?.bikeId }}</td>
+            <td>{{ type?.modelName | uppercase }}</td>
+            <td>{{ type?.manufacturer | uppercase }}</td>
+            <td>{{ type?.type }}</td>
+            <td>{{ type?.rentPrice }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container" id="table-container">
+      <div class="row">
+        <div class="h2">Our Inventory</div>
+
+        <table class="table table-striped table-dark custab">
+          <thead>
+            <tr>
+              <th>Bike Id</th>
+              <th>Bike Name</th>
+              <th>Manufacturer</th>
+              <th>Bike Type</th>
+              <th>Rent/Hour(Rs.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bike of bikes">
+              <td>{{ bike.bikeId }}</td>
+              <td>{{ bike.modelName | uppercase }}</td>
+              <td>{{ bike.manufacturer | uppercase }}</td>
+              <td>{{ bike.type }}</td>
+              <td>{{ bike.rentPrice }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>

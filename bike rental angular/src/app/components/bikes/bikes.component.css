@@ -1,0 +1,25 @@
+#table-container{
+    margin-top: 100px;
+}
+
+body{
+    background-color: #e0ffff;
+    height: auto;
+}
+
+.h2{
+    margin-bottom: 20px;
+    /* font-weight: bold; */
+}
+
+select{
+    padding: 5px;
+}
+
+.select{
+    margin-bottom: 20px;
+}
+
+#output-tables{
+    margin-top: 20px;
+}

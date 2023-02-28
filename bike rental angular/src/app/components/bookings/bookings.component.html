@@ -1,0 +1,51 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+<body>
+  <app-navbar></app-navbar>
+
+  <div class="container">
+    <div class="container" id="table-container" *ngIf="bookingResult">
+      <h2>Your Bookings</h2>
+      <table class="table table-striped custab">
+        <thead>
+          <tr>
+            <th>Booking Id</th>
+            <th>Bike Name</th>
+            <th>Manufacturer</th>
+            <th>License No.</th>
+            <th>Duration (Hour)</th>
+            <th>Location</th>
+            <th>Total Cost</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings">
+            <td>{{ booking.bookingId }}</td>
+            <td>{{ booking.modelName | uppercase }}</td>
+            <td>{{ booking.manufacturer | uppercase }}</td>
+            <td>{{ booking.licenseNo }}</td>
+            <td>{{ booking.duration }}</td>
+            <td>{{ booking.location }}</td>
+            <td>{{ booking.cost }}</td>
+            <button class="btn btn-xs" (click)="cancel(booking.bookingId)">
+              <mat-icon>delete_forever</mat-icon>
+            </button>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="outputMessage" *ngIf="outputMessage">
+      <h2>{{ errorMessage }}</h2>
+    </div>
+  </div>
+</body>

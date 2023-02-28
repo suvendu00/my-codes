@@ -1,0 +1,18 @@
+.mat-card{
+    max-width: 500px;
+    margin: 2em auto;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 0 12px 2px gray;
+    
+}
+mat-form-field{
+    display: block;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+body{
+    background-color: #e0ffff;
+}

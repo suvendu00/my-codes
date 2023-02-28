@@ -1,0 +1,13 @@
+#table-container{
+    /* visibility: hidden; */
+    margin-top: 50px;
+}
+
+.table{
+    margin-top: 10px;
+}
+body{
+    background-color: #e0ffff;
+    height: 100%;
+
+}

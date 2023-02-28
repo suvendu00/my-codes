@@ -1,0 +1,71 @@
+<body>
+  <mat-card>
+    <mat-card-content>
+      <p>Bike Rental Portal</p>
+      <p>Register</p>
+    </mat-card-content>
+    <mat-card-content>
+      <form (ngSubmit)="register()" [formGroup]="loginForm">
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="fullname"
+            required
+            placeholder="Full Name"
+            formControlName="fname"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="email"
+            name="email"
+            required
+            placeholder="Email Id"
+            formControlName="email"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="number"
+            name="phno"
+            required
+            placeholder="Phone No"
+            formControlName="phno"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            name="uname"
+            required
+            placeholder="Username"
+            formControlName="uname"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="password"
+            required
+            name="password"
+            placeholder="Password"
+            formControlName="pass"
+          />
+        </mat-form-field>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!loginForm.valid"
+        >
+          Register
+        </button>
+      </form>
+      <h2>{{ message }}</h2>
+    </mat-card-content>
+  </mat-card>
+</body>
