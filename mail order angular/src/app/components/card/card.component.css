@@ -1,0 +1,60 @@
+.card{
+    width:95vw;
+    background-color: white;
+    height: 50vh;
+    margin: auto;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    /* border:2px solid black; */
+    box-shadow: 0 0 12px 2px grey;
+}
+
+.textForCard{
+    width: 50%;
+    height: 100%;
+    border-radius: 12px;
+
+}
+.textForCard p{
+    padding: 4%;
+       border-radius: 12px;
+}
+.headerForCard{
+padding-top: 4%;
+text-align: center;
+text-shadow: 1px 1px rgba(0, 0, 0, 0.363);
+color:#EDCB1A
+}
+.headerForCard p{
+overflow: hidden;
+}
+.imgForCard{
+    width: 50%;
+    height: 100%;
+   
+    border-radius:12px
+}
+.cardImg{
+    background-image: url("../../images/paracitamol.jpg");
+    width: 80%;
+    height: 80%;
+    background-size: cover;
+    margin-left: 15%;
+    margin-top: 5%;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 2px grey;
+}
+
+.cardImg2{
+    background-image: url("../../images/anti.jpg");
+    width: 80%;
+    height: 80%;
+    background-size: cover;
+    margin-left: 15%;
+    margin-top: 5%;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 2px grey;
+}

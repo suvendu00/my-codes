@@ -1,0 +1,121 @@
+.dashNa{
+  position: absolute;
+  top:0;
+  width: 100vw;
+  height: auto;
+  background: black;
+  /* margin-top: -4%; */
+}
+/* .custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 2% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    } */
+
+#table-container{
+  margin-top: 10%;
+} 
+
+.dropdown{
+  
+}
+.container{
+  margin-top: 10%;
+  /* background-color: aqua; */
+  
+}
+#search{
+  margin-bottom: 5%;
+}
+
+.input1{
+  margin-top: 0%;
+}
+#search-container{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#output-table{
+  margin-top: 5%;
+}
+
+.col-md-12 {
+  width: 62%;
+}
+#custom-search-input .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 43px;
+}
+
+#custom-search-input button {
+  border: 0;
+  background: none;
+  /** belows styles are working good */
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color:green;
+}
+
+.search-query:focus + button {
+  z-index: 3;  
+}
+.input-group {
+  /* position: relative; */
+  display: table;
+  border-collapse: separate;
+  /* padding-right: 0px; */
+  /* padding-left: 183px; */
+}
+
+
+
+
+table {
+  background: #012B39;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 2%;
+}
+th {
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+td {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.65em 1em;
+}
+
+tr {
+  transition: background 0.25s ease;
+}
+ tr:hover {
+  background: #014055;
+}

@@ -1,0 +1,82 @@
+<div class="alertsContainer" *ngIf="shows">
+    <div class="alerts">
+        <div class="response">{{res}}</div>
+        <button (click)="shows=!shows">Close</button>
+    </div>
+</div>
+<div class="options">
+
+
+    <div class="dashNav">
+        <app-navbar></app-navbar>
+    </div>
+
+    <div class="inputCard">
+        <h1>Subscription Services</h1>
+        <ul>
+            <li *ngIf="statusClass" #cp1 ngClass={{class[0]}} (click)="changeStyle(0)">Create a new subscription
+
+            </li>
+            <div *ngIf="collapsible[0]" class="collapsible">
+
+                <form [formGroup]="elevenInputForm" (ngSubmit)="fetchWithMemId()">
+
+
+                    <input required class="memberID" type="number" placeholder="enter  Id" formControlName="id">
+                    <input required class="memberID" placeholder="enter member Id" formControlName="memberId">
+                    <input required class="memberID" placeholder="enter member Location"
+                        formControlName="memberLocation">
+                    <input required class="memberID" placeholder="enter policy number" formControlName="policyNumber">
+                    <input required class="memberID" placeholder="enter insuranceProvider"
+                        formControlName="insuranceProvider">
+                    <input required class="memberID" placeholder="yyyy-mm-dd" value="" min="1997-01-01" max="2030-31-12"
+                        formControlName="date">
+                    <input required class="memberID" placeholder="enter dosage" formControlName="dosage">
+                    <input required class="memberID" type="number" placeholder="enter quantity" formControlName="quantity">
+                    <input required class="memberID" placeholder="enter drug name" formControlName="drugName">
+                    <input required class="memberID" placeholder="enter doctor details" formControlName="doctorDetails">
+                    <input required class="memberID" type="number" placeholder="enter course duration" formControlName="courseDuration">
+                    
+
+                    <button [disabled]="!elevenInputForm.valid">search</button>
+                </form>
+
+            </div>
+
+            <li ngClass={{class[2]}} #cp3 (click)="changeStyle(2)">Unsubscribe Now
+
+            </li>
+            <div *ngIf="collapsible[2]" class="collapsible">
+
+                <form [formGroup]="twoInputForm" (ngSubmit)="twoInputFunc()">
+                    <input required class="memberID" placeholder="enter subscriptionid" formControlName="subsciptionid">
+                    <input required class="memberID" placeholder="enter member Id" formControlName="memberid">
+                    <button [disabled]="!twoInputForm.valid">search</button>
+                </form>
+
+            </div>
+        </ul>
+
+
+
+
+
+        <!-- <table *ngIf="displayElement" style="width:100%">
+              <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+              </tr>
+              <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+              </tr>
+              <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+              </tr>
+            </table> -->
+    </div>
+</div>

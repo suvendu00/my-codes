@@ -1,0 +1,198 @@
+.dashN{
+    position: absolute;
+    top:0;
+    width: 100vw;
+    height: auto;
+    background: black;
+    
+}
+.resultPage{
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background: #105469;
+    top:0;
+    z-index: 1005;
+    display: grid;
+    place-items: center;
+    padding-bottom: 2%;
+}
+.close{
+  position: absolute;
+  right: 2%;
+  top:4%;
+    width: 5vw;
+    height: 4vh;
+}
+.options{
+    width: 100vw;
+    height: 90vh;
+    background-color:white;
+    padding-top: 15vh;
+    background-color:#89B0CC;
+}
+.inputCard{
+   width:50vw;
+    height:80vh;
+background-color: white;
+/* background-color:#89B0CC; */
+margin: auto;
+/* margin-left: 1vw; */
+margin-top: 1vh;
+padding-top: 2vh;
+border-radius: 12px;
+    box-shadow: 0 0 12px 2px grey;
+   
+
+}
+.inputCard h1{
+    padding: 2%;
+    margin: 3%;
+    text-align: center;
+}
+.collapsible{
+    display:flex;
+    flex-direction: column;
+    margin-top: -8%;
+    margin-bottom: 5%;
+}
+.collapsible input{
+    margin-bottom: 2%;
+    width: 25%;
+    border: 0;
+    border-bottom:2px solid black ;
+    outline: 0;
+}
+.collapsible button{
+      width: 12%;
+      height: 45%;
+}
+.inputCard ul{
+    width: 80%;
+    height: 80%;
+    margin:auto ;  
+    
+     /* margin-top: -8%  */
+    
+}
+li{
+    list-style-type: none;
+    padding-left:4% ;
+    font: 1em sans-serif;
+}
+.dashNav{
+    position: absolute;
+    top:0;
+    width: 100vw;
+    height: auto;
+    background: black;
+    /* margin-top: -4%; */
+}
+
+
+.changeCSS{
+    /* text-align: center; */
+    margin-bottom:10% ;
+    height: 10%;
+    padding-top: 4%;
+    /* height: auto; */
+    /* background-color: white;
+     */
+     background-color:white;
+    border-radius: 12px;
+      box-shadow: 0 0 12px 2px grey;
+
+}
+.activeCSS{
+    /* text-align: center; */
+    margin-bottom:10% ;
+    height: 10%;
+    padding-top: 4%;
+    /* height: auto; */
+    background-color: white;
+    border-radius: 12px;
+      box-shadow: 0 0 12px 2px white;
+      -webkit-box-shadow: inset 0px 0px 15px #c1c1c1;
+      -moz-box-shadow: inset 0px 0px 15px #c1c1c1;
+           box-shadow: inset 0px 0px 15px #c1c1c1;
+}
+
+
+
+
+table {
+  background: #012B39;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 2%;
+}
+th {
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+td {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.65em 1em;
+}
+
+tr {
+  transition: background 0.25s ease;
+}
+ tr:hover {
+  background: #014055;
+}
+.collapsible form input{
+  /* background-color: #012B39; */
+  margin-right: 2%;
+}
+.collapsible form  button{
+background-color: black;
+color:white;
+outline: none;
+border: 1px solid grey;
+padding: 1%;
+}
+.alertsContainer{
+  width: 100vw;
+  height: 100vh;
+  top:0;
+  left:0;
+  background-color:transparent;
+  position: absolute;
+ display: grid;
+ place-content: center;
+}
+.alerts{
+  width: 30vw;
+  height: 30vh;
+  background-color: white;
+  /* border: 2px solid black; */
+  box-shadow: 0 0 12px 2px grey;
+  border-radius: 12px;
+}
+.alerts button{
+  width: 4vw;
+  height: 5vh;
+  margin: 2vw 13vw 13vw 13vw;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+.response{
+  width: 27vw;
+  height: 6vh;
+  margin: 7vh 3vh 3vh 3vh;
+  background-color: white;
+  /* padding-left:2vw ; */
+  text-align: center;
+  padding-top: 3vh;
+  border: 2px solid black;
+  font-size: larger;
+  border-radius: 12px;
+}

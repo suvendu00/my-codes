@@ -1,0 +1,112 @@
+body{
+  
+  margin:0;
+}
+
+.body{
+  background-color:#89B0CC;
+  /* #89B0CC */
+  padding-top:2.5vh; 
+  width: 100vw;
+  height: auto;
+  margin: 0;
+
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+*{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+  /* .container1
+  {
+  background-color: antiquewhite;
+  }
+  .container1 p{
+    margin-left: 50%;
+    text-align: justify;
+    margin-top: 10%;
+  }
+  .container1 img{
+      margin-left: 20%;
+      margin-top: 2%;
+  }
+  
+  .container3 p{
+    margin-left: 50%;
+    text-align: justify;
+    margin-top: 10%;
+  }
+  .container3 img{
+      margin-left: 20%;
+      margin-top: 2%;
+  }
+  .container5 p{
+    margin-left: 50%;
+    text-align: justify;
+    margin-top: 10%;
+  }
+  .container5 img{
+      margin-left: 20%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+  }
+  .container2
+  {
+    background-color: blanchedalmond;
+  }
+  .container2 img{
+    margin-left: 40%;
+    margin-top: 2%;
+  }
+  .container2 p{
+      text-align: justify;
+      margin-left: 35%;
+      margin-top: 10%;
+  }
+  .container4 img{
+    margin-left: 40%;
+    margin-top: 2%;
+  }
+  .container4 p{
+      text-align: justify;
+      margin-left: 35%; 
+      margin-top: 10%; 
+  }
+  
+  .container3
+  {
+    background-color: antiquewhite;
+  }
+  
+  .container4
+  {
+    background-color: blanchedalmond;
+  }
+  
+  .container5
+  {
+    background-color: antiquewhite;
+  }
+  
+  .drugcls
+  {
+    
+    height:800px;
+    background-image: url("https://images.unsplash.com/photo-1636953056323-9c09fdd74fa6?ixlib=rb-1.2.1&dl=shubham-dhage-NsPqV-WsZYY-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb");
+  
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+   background-color: beige;
+  }
+  .q1{
+    position: absolute;
+    bottom: 150px;
+    left: 50px;
+    color: white;
+    font-style: oblique;
+    font-size: 4em;
+    font-weight: bold;
+  } */
+  

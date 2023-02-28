@@ -1,0 +1,127 @@
+ <link
+  href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/> 
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<div class="dashNa">
+  <app-navbar></app-navbar>
+</div>
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+  <div class="column" id="search-container">
+  
+    <div class="dropdown">
+      <div class="column" id="search">
+        <select name="search" (change)="callSearchId($event)" class="col-md-6">
+          <option>Search Drug by Id</option>
+          <option *ngFor="let drug of drugs">
+            {{ drug.drugId }}
+          </option>
+        </select>
+      </div>
+
+      <div class="column" id="search">
+        <select name="search" (change)="callSearchName($event)" class="col-md-6">
+          <option>Search Drug by Name</option>
+          <option *ngFor="let drug of drugs">
+            <!-- {{ drug.drugName | uppercase }} -->
+            {{ drug.drugName }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="container" id="output-tables" *ngIf="outputDiv">
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <th>Drug Id</th>
+          <th>Drug Name</th>
+          <th>Manufacturer</th>
+          <th>Manufacture Date</th>
+          <th>Expiry Date</th>
+          <th>Units In a Package</th>
+          <th>Cost Per Package</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ drugDetails?.drugId }}</td>
+          <!-- <td>{{ drugDetails?.drugName | uppercase }}</td>
+          <td>{{ drugDetails?.manufacturer | uppercase }}</td> -->
+          <td>{{ drugDetails?.drugName  }}</td>
+          <td>{{ drugDetails?.manufacturer  }}</td>
+          <td>{{ drugDetails?.manufactureDate }}</td>
+          <td>{{ drugDetails?.expiryDate }}</td>
+          <td>{{ drugDetails?.unitsInAPackage }}</td>
+          <td>{{ drugDetails?.costPerPackage }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <th>Serial Id</th>
+          <th>Location</th>
+          <th>Quantity Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let location of drugLocations">
+          <td>{{ location?.serialId }}</td>
+          <!-- <td>{{ location?.location | uppercase }}</td> -->
+          <td>{{ location?.location  }}</td>
+          <td>{{ location?.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container" style="padding-bottom: 10%;"id="table-container">
+    <div class="row">
+      <div class="h2" style="text-align: center">Our Inventory</div>
+
+      <table  style="width:100%">
+        <thead>
+          <tr>
+            <th>Drug Id</th>
+            <th>Drug Name</th>
+            <th>Manufacturer</th>
+            <th>Manufacture Date</th>
+            <th>Expiry Date</th>
+            <th>Units In a Package</th>
+            <th>Cost Per Package</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let drug of drugs">
+            <td>{{ drug.drugId }}</td>
+            <!-- <td>{{ drug.drugName | uppercase }}</td>
+            <td>{{ drug.manufacturer | uppercase }}</td> -->
+            <td>{{ drug.drugName  }}</td>
+            <td>{{ drug.manufacturer  }}</td>
+            <td>{{ drug.manufactureDate }}</td>
+            <td>{{ drug.expiryDate }}</td>
+            <td>{{ drug.unitsInAPackage }}</td>
+            <td>{{ drug.costPerPackage }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script>
+  angular.module("app", []).controller("example", [
+    "$scope",
+    function ($scope) {
+      $scope.message = "simply learning";
+    },
+  ]);
+</script>

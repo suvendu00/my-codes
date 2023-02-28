@@ -1,0 +1,37 @@
+.alertsContainer{
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-color:transparent;
+    position: absolute;
+   display: grid;
+   place-content: center;
+}
+.alerts{
+    width: 30vw;
+    height: 30vh;
+    background-color: white;
+    /* border: 2px solid black; */
+    box-shadow: 0 0 12px 2px grey;
+    border-radius: 12px;
+}
+.alerts button{
+    width: 4vw;
+    height: 5vh;
+    margin: 2vw 13vw 13vw 13vw;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+.response{
+    width: 27vw;
+    height: 6vh;
+    margin: 7vh 3vh 3vh 3vh;
+    background-color: white;
+    /* padding-left:2vw ; */
+    text-align: center;
+    padding-top: 3vh;
+    border: 2px solid black;
+    font-size: larger;
+    border-radius: 12px;
+}

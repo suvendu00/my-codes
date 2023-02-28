@@ -1,0 +1,20 @@
+<div class="loginPage">
+    <div class="loginimgCover">
+        <p> MAIL</p>
+        <p>ORDER</p>
+        <p>PHARMACY</p>
+    </div>
+    <div class="loginContainer">
+        <div class="loginimg">
+
+        </div>
+        <form  (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <input type="text" name="username" required placeholder="Enter Username" class="name" formControlName="name">
+        <input required type="text" formControlName="pass" class="pass" placeholder="PASSWORD">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+</div>
+
+

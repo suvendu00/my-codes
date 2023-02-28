@@ -1,0 +1,110 @@
+
+<div class="alertsContainer" *ngIf="show">
+  <div class="alerts">
+      <div class="response">{{response}}</div>
+      <button (click)="show=!show">Close</button>
+  </div>
+</div>
+<div class="resultPage" *ngIf="resultsShowHide">
+  <div style="width:100%;height:100%">
+  <table  style="width:60%">
+    <tr >
+      <th>id</th>
+      <th>subscriptionId</th>
+      <th>refilledDate</th>
+      <th>quantity</th>
+      <th>payStatus</th>
+      <th>memberId</th>
+    </tr>
+
+    <tr *ngFor="let a of res">
+      <th>{{a.id}}</th><th>{{a.subscriptionId}}</th><th>{{a.refilledDate}}</th><th>{{a.quantity}}</th><th>{{a.payStatus}}</th><th>{{a.memberId}}</th> 
+    </tr>
+    
+    
+  </table>
+  <button (click)="resultsShowHide=!resultsShowHide" class="close"> close </button>
+</div>
+  
+   </div>
+<div class="options">
+  
+
+  <div class="dashNav">
+    <app-navbar></app-navbar>
+  </div>
+
+  <div class="inputCard">
+    <h1>Refill Services</h1>
+    <ul>
+      <li *ngIf="statusClass" #cp1 ngClass={{class[0]}} (click)="changeStyle(0)">Check status of refill
+
+      </li>
+      <div *ngIf="collapsible[0]" class="collapsible">
+
+        <form [formGroup]="oneInputForm" (ngSubmit)="fetchWithMemId()">
+        <input required class="memberID" type="number"  placeholder="enter member Id" formControlName="subsciptionid">
+        <button [disabled]="!oneInputForm.valid" >search</button>
+        </form>
+      
+      </div>
+
+      <li ngClass={{class[1]}} #cp2 (click)="changeStyle(1)">Request adhoc refill
+      </li>
+      <div *ngIf="collapsible[1]" class="collapsible">
+
+        <form [formGroup]="fiveInputForm" (ngSubmit)="fiveInputFunc()">
+
+          <input required formGroupName="subsciptionid" type="number" class="memberID" placeholder="enter subscription Id" formControlName="subsciptionid">
+
+           <input required formGroupName="quantity" type="number" class="memberID" placeholder="enter quantity" formControlName="quantity">
+          
+           <input required formGroupName="location" type="text" class="memberID" placeholder="enter location" formControlName="location">
+          
+           <input required formGroupName="memberid" type="text" class="memberID" type="text" placeholder="enter member Id" formControlName="memberid">
+          
+           <input required formGroupName="payStatus" class="memberID" placeholder="enter pay status"  formControlName="payStatus"> 
+          
+           <button [disabled]="!fiveInputForm.valid">search</button>
+        </form>
+
+      </div>
+      <li ngClass={{class[2]}} #cp3 (click)="changeStyle(2)">Get list of dues
+
+
+      </li>
+      <div *ngIf="collapsible[2]" class="collapsible">
+
+        <form [formGroup]="twoInputForm" (ngSubmit)="twoInputFunc()">
+        <input required formGroupName="date" class="memberID"  placeholder="enter date" formControlName="date">
+        <input required formGroupName="memberid" class="memberID" placeholder="enter member Id" formControlName="memberid">
+        <button [disabled]="!twoInputForm.valid">search</button>
+        </form>
+
+      </div>
+    </ul>
+
+
+
+
+
+    <!-- <table *ngIf="displayElement" style="width:100%">
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+          </table> -->
+  </div>
+</div>
+

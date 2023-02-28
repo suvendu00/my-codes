@@ -1,0 +1,63 @@
+.locaContainer{
+    width:95%;
+    height: 100vh;
+    margin: auto;
+    padding-top:4vh;
+    background-color: white;
+    padding-bottom:4vh;
+    box-shadow: 0 0 12px 2px grey;
+    border-radius:12px ;
+}
+.locationH3{
+    width: 100%;
+    height: 8%;
+text-align: center;
+ font-size: 150%;
+ text-shadow: 1px 1px rgba(0, 0, 0, 0.363);
+ color:#EDCB1A;
+ /* background-color: white; */
+
+}
+.locationImg{
+    width:100%;
+    height: 92%;
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.locationImage{
+    width: 45%;
+    height: 48%;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    display: grid;
+    place-content: center;
+box-shadow: 0 0 12px 2px grey;   
+border-radius:12px ;
+
+background-size: cover;
+
+}
+.locationImage p{
+background-color: rgba(0, 0, 0, 0.466);
+color: white;
+font-size: larger;
+padding: 12%;
+width: fit-content;
+font-weight: bolder;
+border-radius: 12px;
+text-shadow: 1px 1px grey;
+}
+.img1{
+    background-image: url("../../images/bangalore.jpg");
+}
+.img2{
+    background-image: url("../../images/chennai.jpg");
+}
+.img3{
+    background-image: url("../../images/kolkata.jpg");
+}
+.img4{
+    background-image: url("../../images/hyderabad.jpg");
+}

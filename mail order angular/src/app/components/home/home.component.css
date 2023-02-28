@@ -1,0 +1,24 @@
+.main{
+    box-shadow:0 0 12px 12px white ;
+    background-image: url("../../images/med.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 95vw;
+    height: 95vh;
+    margin:0 2.5vh 0 2.5vw;
+    border-radius:60px;
+    /* padding-top: 5vh; */
+    box-shadow: 0 0 12px 12px white;
+
+    
+  }
+  .home{
+  padding: 4% 0 2% 2%;
+  }
+  .homePage{
+    width: 100vw;
+    height: auto;
+    background-color:#89B0CC;
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+  }
